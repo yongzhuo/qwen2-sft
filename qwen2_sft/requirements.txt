@@ -1,0 +1,11 @@
+transformers>=4.37.0
+torch>=1.13.1
+
+safetensors>=0.4.1
+accelerate==0.27.1
+fsspec==2023.9.2
+tensorboardX==2.4
+rouge==1.0.1
+nltk==3.6.6
+numpy
+tqdm
