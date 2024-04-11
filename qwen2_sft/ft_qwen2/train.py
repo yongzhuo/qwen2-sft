@@ -174,7 +174,7 @@ def data_collator(batch):
     for ba in batch:
         x, y = ba.get("input_ids"), ba.get("labels")
         len_padding = len_max_batch - len(x) - len(y)
-        if use_all_loss: ### 部分loss参与计算, output
+        if not use_all_loss: ### 部分loss参与计算, output
             if tokenizer.padding_side and tokenizer.padding_side == "left":
                 labels = [-100] * len_padding + [-100] * len(x) + y
                 input_ids = [ID_PAD] * len_padding + x + y
